@@ -1,4 +1,3 @@
-alert("JavaScript works!");var 
 var 
 
 if () {
