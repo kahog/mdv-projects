@@ -7,8 +7,8 @@ var businessType = "website"
 	businessStarted ="The website that I'm going to start is ",
 	budget = 10000
 	steps = ["decided on a website name", "formulated budget", "made business plan", "gathered customers"]
-	sites = ["facebook", "GooglePlus", "twitter", "linkedIn", "pinterest"],
-	likes = [2800, 2400, 1800, 1700, 1400]; 
+	sites = ["facebook", "GooglePlus", "twitter", "linkedIn"],
+	likes = [2800, 2400, 1800, 1700]; 
 //	websiteName = "Launchshares.com "
 //Procedure Function 	
 var startABusiness = function(businessType){	
@@ -34,7 +34,8 @@ var getWebsiteName = function(LaunchShares, FinallyLaunched){
 //Number Function (formulated budget)
 var formulateBudget = function(budget){
 	var monthlyExpense = 1640,
-		monthsTilBroke = budget/monthlyExpense ;
+		monthsTilBroke = budget/monthlyExpense,
+		monthsTilBroke = Math.round(monthsTilBroke);
 	while(budget >= monthlyExpense && monthsTilBroke > 0){
 	console.log("We still have " + monthsTilBroke + " months until we are broke. ");
 	monthsTilBroke--;}
@@ -47,9 +48,12 @@ var businessPlan = function(websiteName, businessType){
 //Array Function  (gather customers)
 var gatherCustomers = function(likes, sites){
 	var adSitesOn;
+	//added the .push to correct the necessary syntax for the array
+	sites.push("pinterest");
+	likes.push(1400);
 	for (var adSites = 0; adSites < sites.length; adSites++){
 	var adSitesOn = adSites + 1;	
-	console.log("We just joined " +sites[adSites] +  "and have " +likes[adSites] + " from them.  We are now on " +adSitesOn +" sites.")
+	console.log("We just joined " +sites[adSites] +  " and have " +likes[adSites] + " from them.  We are now on " +adSitesOn +" sites.");
 	}return adSitesOn;
 };
 
