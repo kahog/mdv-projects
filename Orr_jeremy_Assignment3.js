@@ -19,7 +19,6 @@ var isHungry = true;
     	meat:       ["chicken strips", "ham", "steak"],
     	drink:      ["Mountain Dew", "Ice Tea", "Lemonade"]
 },
-    	drink:      ["milk", "orange juice", "coffee"]
 	dinner {
     	appetizer:   "spinach and artichoke dip",
     	condiments:  ["steak sauce", "ketchup", "salsa"]     
