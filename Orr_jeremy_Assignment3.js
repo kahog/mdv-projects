@@ -4,7 +4,6 @@
 //08/12/2012
 //randomize snack choice
 var isHungry = true;
-    	entree:   	 "eggs"			
 	snack = ["PB and J", "Crackers and Cheese", "Corn dog"],
 	snackCount = snack[Math.floor(Math.random() * snack.length)];
 //gets the time of day being run and returns mealTime accordingly
