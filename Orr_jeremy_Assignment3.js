@@ -43,3 +43,11 @@ if ( isHungry = true ){
 	}
 whatMeal(mealTime());
 
+var hungry = function(){
+	if (isHungry = true)
+	console.log("lets make some food I'm hungry");
+	} else {
+	console.log("I'm not hungry let's do some homework")
+	})
+hungry();	
+whatMeal(mealTime());
