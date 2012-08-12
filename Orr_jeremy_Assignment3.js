@@ -2,28 +2,66 @@
 //Assignment: Project 3
 //Class: SDI 1208
 //08/12/2012
-var afterNoon = function(mealtime){
-	if(mealtime >= 1300){
-	var afterLunch = mealTime - 12 + "PM"
-	}return afterLunch;
-}
-
+//randomize snack choice
+var isHungry = true;
+	meals = [breakfast{}, lunch{}, dinner{}]
+	breakfast {
+    	appetizer:   "bagel",
+    	condiments:  ["cream cheese", "ketchup", "syrup"]     
+    	entree:   	 "eggs"			
+    	meat:       ["sausage", "ham", "steak", "bacon" ],
+    	drink:      ["milk", "orange juice", "coffee"]
+},
+	breakfast {
+    	appetizer:   "bagel",
+    	condiments:  ["cream cheese", "ketchup", "syrup"]     
+    	entree:   	 "eggs"			
+    	meat:       ["sausage", "ham", "steak", "bacon" ],
+    	drink:      ["milk", "orange juice", "coffee"]
+},
+	breakfast {
+    	appetizer:   "bagel",
+    	condiments:  ["cream cheese", "ketchup", "syrup"]     
+    	entree:   	 "eggs"			
+    	meat:       ["sausage", "ham", "steak", "bacon" ],
+    	drink:      ["milk", "orange juice", "coffee"]
+};
+	
+	
+	
+	
+	snack = ["PB and J", "Crackers and Cheese", "Corn dog"],
+	snackCount = snack[Math.floor(Math.random() * snack.length)];
+//gets the time of day being run and returns mealTime accordingly
+ var mealTime =  function(){
+	var time = new Date(),
+	hour = time.getHours(),
+	minutes = time.getMinutes(),
+	seconds = time.getSeconds();
+	timeOfDay = hour + ":" + minutes + ":" + seconds
+	return timeOfDay, hour;
+};
+var hour;
+var timeOfDay;
 var whatMeal = function(mealTime){
-	if (mealTime >= 0 && mealTime < 3 ){
+	if (mealTime.hour >= 0 && mealTime.hour < 3 ){
 	console.log("Let's make a midnight snack")
-	} else if(mealTime >= 3 && mealTime < 6 ){
-	console.log("Why are we making a meal at " + mealTime + ")
+	} else if(hour >= 3 && hour < 6 ){
+	console.log("Why are we making a meal at " + mealTime())
 	} else if(mealTime >= 6 && mealTime < 9 ){
 	console.log("Its only " + mealTime + "but let's make breakfast")
 	} else if(mealTime >= 9 && mealTime < 12 ){
-	console.log("Since it's " + mealTime + "let's make a " + snack +".")
+	console.log("Since it's " + mealTime + "let's make a " + snackCount +".")
 	} else if(mealTime >= 12 && mealTime < 15 ){
-	console.log("let's have lunch since it's " + afterNoon)
+	console.log("let's have lunch since it's " + timeOfDay())
 	} else if(mealTime >= 15 && mealTime < 18 ){
-	console.log("")
+	console.log("Since it's " + timeOfDay + " let's have a " + snackCount + " and wait until dinner")
 	} else if(mealTime >= 18 && mealTime < 21 ){
-	console.log("")
+	console.log("Finally it's dinner time, I am ready to have something amazing")
 	} else {
 	console.log("Let's make a midnight snack")
 	};
 };
+
+whatMeal(mealTime());
+var hungry = function()
