@@ -1,6 +1,7 @@
 var	mealDetails = {
 	"meals" : {
-	 "breakfast":{  
+	 "breakfast":{
+	 		TheMealIs:	"breakfast", 
     		appetizer:   "bagel",
     		condiments:  ["cream cheese", "ketchup", "syrup"],     
     		entree:   	 "eggs",			
@@ -8,6 +9,7 @@ var	mealDetails = {
     		drink:      ["milk", "orange juice", "coffee"]
 		},
 		 "lunch":{
+		 	TheMealIs:	"lunch",
     		appetizer:   "spinach and artichoke dip",
     		condiments:  ["ketchup", "bbq sauce", "ranch dressing"],     
     		entree:   	 "fried potatoes",			
@@ -15,6 +17,7 @@ var	mealDetails = {
     		drink:      ["Mountain Dew", "Ice Tea", "Lemonade"],
 		},
 		 "dinner":{
+		 	TheMealIs:	"dinner",
     		appetizer:   "spinach and artichoke dip",
     		condiments:  ["steak sauce", "ketchup", "salsa"],     
     		entree:   	 "mashed potatoes",			
