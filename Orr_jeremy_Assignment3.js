@@ -8,7 +8,7 @@ var isHungry = true;
 	snackCount = snack[Math.floor(Math.random() * snack.length)];
 	thisMeal = function(forMeal){
 	if (mealTime() >= 3 && mealTime() < 9)
-	var forMeal = mealDetails.meals.whatsTheMeal
+	var forMeal = mealDetails["meals"][0]
 	console.log(forMeal)
 	return forMeal;
 	}
@@ -23,6 +23,7 @@ var isHungry = true;
 };
 var hour;
 var timeOfDay;
+//decide what meal we are having and runs console.log statements determining what we are having
 var whatMeal = function(mealTime){
 	if (mealTime >= 0 && mealTime < 3 ){
 	console.log("Let's make a midnight snack")
@@ -46,7 +47,7 @@ var whatMeal = function(mealTime){
 	};
 };
 var forMeal;
-
+//boolean function
 var hungry = function(isHungry){
 	if (isHungry = true){
 	console.log("Let's make some food I'm hungry");
@@ -54,9 +55,14 @@ var hungry = function(isHungry){
 	console.log("I'm not hungry let's do some homework")
 	};
 };
-thisMeal(mealDetails);
+//number function
+var mealChoices = function(meal){};
 mealTime()
 console.log("Right now it is " + timeOfDay)	
 hungry(true);	
 whatMeal(mealTime());
-thisMeal(mealDetails);
+thisMeal(forMeal);
+
+
+
+
