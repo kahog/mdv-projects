@@ -2,6 +2,9 @@
 //Assignment: Project 3
 //Class: SDI 1208
 //08/12/2012
+//Still need for loop and while loop as well as a nested if loop
+
+
 //randomize snack choice
 var isHungry = true;
 	snack = ["PB and J", "Crackers and Cheese", "Corn dog"],
@@ -11,14 +14,11 @@ var isHungry = true;
 var	thisMeal = function(forMeal){
 	if (mealTime() >= 3 && mealTime() < 9){
 	var forMeal = mealDetails["meals"]["breakfast"].TheMealIs;
-	console.log(forMeal)
 	return forMeal;
 	} else if (mealTime() >= 9 && mealTime() < 15){
 	var forMeal = mealDetails["meals"]["lunch"].TheMealIs;
-	console.log(forMeal)
 	} else {
 	var forMeal = mealDetails["meals"]["dinner"].TheMealIs;
-	console.log(forMeal)
 	} return forMeal;
 };
 
@@ -33,19 +33,17 @@ var	thisMeal = function(forMeal){
 };
 var hour;
 var timeOfDay;
-
-
 //decide what meal we are having and runs console.log statements determining what we are having
 var whatMeal = function(mealTime){
 	if (mealTime >= 0 && mealTime < 3 ){
 	console.log("Let's make a midnight snack")
 	} else if(hour >= 3 && hour < 6 ){
-	console.log("Why are we making a meal at " + mealTime())
+	console.log("Why are we making a meal at " + timeOfDay)
 	} else if(mealTime >= 6 && mealTime < 9 ){
-	console.log("Its only " + mealTime + "but let's make breakfast")
+	console.log("Its only " + timeOfDay + "but let's make breakfast")
 	console.log(randomMealChoice(forMeal))
 	} else if(mealTime >= 9 && mealTime < 12 ){
-	console.log("Since it's " + mealTime + "let's make a " + snackCount +".")
+	console.log("Since it's " + timeOfDay + " let's make a " + snackCount +".")
 	} else if(mealTime >= 12 && mealTime < 15 ){
 	console.log("let's have lunch since it's " + timeOfDay)
 //	console.log(randomMealChoice(forMeal))
@@ -96,7 +94,8 @@ mealTime()
 console.log("Right now it is " + timeOfDay)	
 hungry(true);	
 whatMeal(mealTime());
-mealChoices(thisMeal());
+mealChoices(thisMeal(forMeal));
+console.log(thisMeal(forMeal));
 randomMealChoice(thisMeal(forMeal));
 
 
