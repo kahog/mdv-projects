@@ -74,9 +74,11 @@ var mealChoices = function(forMeal){
 	var numberMealChoices = mealDetails["meals"][forMeal].condiments.length * 
 	mealDetails["meals"][forMeal].meat.length *mealDetails["meals"][forMeal].drink.length;
 	console.log("The number of meal choices we have for " + forMeal + " is " + numberMealChoices + ".");
+	return numberMealChoices;
  }; 
  
  //string concatenation
+ var randomMealChoice = function(forMeal){
 	var drinkChoice		= mealDetails["meals"][forMeal].drink
 		meatChoice		= mealDetails["meals"][forMeal].meat		
 		condimentChoice	= mealDetails["meals"][forMeal].condiments
