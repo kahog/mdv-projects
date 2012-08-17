@@ -46,12 +46,10 @@ var whatMeal = function(mealTime){
 	console.log("Since it's " + timeOfDay + " let's make a " + snackCount +".")
 	} else if(mealTime >= 12 && mealTime < 15 ){
 	console.log("let's have lunch since it's " + timeOfDay)
-//	console.log(randomMealChoice(forMeal))
 	} else if(mealTime >= 15 && mealTime < 18 ){
 	console.log("Since it's " + timeOfDay + " let's have a " + snackCount + " and wait until dinner")
 	} else if(mealTime >= 18 && mealTime < 21 ){
 	console.log("Finally it's dinner time, I am ready to have something amazing")
-	console.log(randomMealChoice(forMeal))
 	} else {
 	console.log("Let's make a midnight snack")
 	};
@@ -64,6 +62,7 @@ var hungry = function(isHungry){
 	} else {
 	console.log("I'm not hungry let's do some homework")
 	};
+	return 
 };
 //number function
 //Number of available meal choices throughout the day
@@ -88,6 +87,31 @@ var mealChoices = function(forMeal){
 		return chosenChoices;
 	};
 
+//for loop with nested if
+var mealBites = function(){
+	var bites;
+	for(bites = 24; bites > 0; bites--) {
+	console.log("We only have " + bites + " left.")
+		if (bites % 3 === 0){
+		console.log("Bites are divisible by 3");
+		};
+	};return bites;
+};
+//while loop
+var makeDinner = function(){
+	var mealSteps = 7;
+	while (mealSteps >= 1){
+	console.log("There are " + mealSteps + " until dinner is made.")
+	mealSteps--;
+	};
+};
+
+var chosenChoices,
+	numberMealChoices,
+	bites,
+	timeOfDay,
+	hour,
+	forMeal;
 
 
 mealTime()
@@ -96,7 +120,9 @@ hungry(true);
 whatMeal(mealTime());
 mealChoices(thisMeal(forMeal));
 console.log(thisMeal(forMeal));
+makeDinner();
 randomMealChoice(thisMeal(forMeal));
+mealBites();
 
 
 
