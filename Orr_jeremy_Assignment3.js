@@ -2,8 +2,6 @@
 //Assignment: Project 3
 //Class: SDI 1208
 //08/12/2012
-//Still need for loop and while loop as well as a nested if loop
-
 
 //randomize snack choice
 var isHungry = true;
@@ -98,11 +96,12 @@ var mealBites = function(){
 	};return bites;
 };
 //while loop
-var makeDinner = function(){
-	var mealSteps = 7;
-	while (mealSteps >= 1){
-	console.log("There are " + mealSteps + " until dinner is made.")
-	mealSteps--;
+var makeDinner = function(forMeal){
+	var mealSteps = ["get ingredients", "turn on the stove", "heat the appetizer", "pour our drinks", "cook our meat", "make our plates", "eat our delicious food"],
+	steps = 0;
+	while (steps <= mealSteps.length - 1){
+	console.log("For this step we are going to " + mealSteps[steps] + "." + " Only a few more steps until " + forMeal + " is made.")
+	steps++;
 	};
 };
 
@@ -120,7 +119,7 @@ hungry(true);
 whatMeal(mealTime());
 mealChoices(thisMeal(forMeal));
 console.log(thisMeal(forMeal));
-makeDinner();
+makeDinner(thisMeal(forMeal));
 randomMealChoice(thisMeal(forMeal));
 mealBites();
 
