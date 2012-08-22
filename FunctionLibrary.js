@@ -25,7 +25,18 @@ var changeToNumber = function(changeMe){
  alert(numberChanged);
  
  //check the difference between two dates
- 
+ var oneDay = 1000 * 60 * 60 * 24,
+ 	 firstDate = new Date(1983, 10, 2),
+ 	 secondDate = new Date(1990, 2, 24);
+ 	 
+var  dateSpan = function(firstDate, secondDate){
+	var date1 = firstDate.getTime();
+	var	date2 = secondDate.getTime();
+	var	difference = date2 - date1;
+		days = Math.round(difference/oneDay);
+		alert("The difference, in days, between the two given dates is " + days);
+};
+dateSpan(firstDate, secondDate);
  
 
  //Validate email
