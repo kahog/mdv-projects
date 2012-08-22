@@ -24,15 +24,25 @@ var changeToNumber = function(changeMe){
  var numberChanged = changeToNumber(sam)
  alert(numberChanged);
  
- //check the difference between to dates
- var emailIs = "thanks@yahoo.com";
+ //check the difference between two dates
+ 
+ 
+
  //Validate email
+ var emailIs = "thanks@yahoo.com";
+
  function checkEmail(emailEntered) {
 	var email = emailEntered, 
 		atSign = email.indexOf("@"),
 		dot = email.lastIndexOf(".");
 
 	if (atSign == -1 || dot == -1) {
+	alert("Not a valid email address");
+	} else if (dot < atSign){
+	alert("Not a valid email address");
+	} else if (dot - atSign == 1){
+	alert("Not a valid email address");
+	}else if (email = ""){
 	alert("Not a valid email address");
 	} else {
 	alert("Thanks For the email address.");
