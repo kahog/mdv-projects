@@ -1,5 +1,7 @@
 //author: Jeremy L. Orr
+//for: SDI 1208
 //Assignment: Project 4
+//08/21/2012
 
 //This is the beginning of string functions
 
@@ -40,6 +42,7 @@ var checkEmail = function (emailEntered) {
 checkEmail(emailIs);
 
 //This is the Beginning of number Functions
+
 //Change string to Number
 var sam = "42"
 
