@@ -87,5 +87,23 @@ var fuzzyMatch = function(number1, number2){
 
 fuzzyMatch(number1, number2);
 
+// get the first number in an array that is bigger than a given number
 
+var  numbersArray = [1, 17, 12, 36, 45, 78, 22, 54, 43],
+	 sortedNumbers = numbersArray.sort(),
+	 givenNumber = 44,
+	 i = 0;
+	 
+var firstPast = function(givenNumber){
+	var i = 0;	 
+	while (i < sortedNumbers.length){
+	 	if (sortedNumbers[i] > givenNumber){
+	 	alert("The first number in our array that is greater than " + givenNumber + " is " + sortedNumbers[i] + ".");
+	 	break;
+	 	} else {
+	 	i++; 
+	 	};
+	};
+};	 
 
+firstPast(givenNumber);
